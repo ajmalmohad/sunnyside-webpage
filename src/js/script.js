@@ -1,7 +1,3 @@
-if(window.innerWidth > 600){
-    luxy.init()
-}
-
 let hamburger = document.querySelector('.hamburger');
 let navlinks = document.querySelector('.navlinks');
 
