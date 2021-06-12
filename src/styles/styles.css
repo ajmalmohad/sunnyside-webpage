@@ -7,7 +7,223 @@
           box-sizing: border-box;
 }
 
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
   overflow-x: hidden;
+}
+
+.full {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+}
+
+.hero nav {
+  height: 12vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero nav .logo {
+  padding: 0 25px;
+}
+
+.hero nav .navlinks {
+  position: relative;
+}
+
+.hero nav .navlinks ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero nav .navlinks li {
+  color: white;
+  font-family: 'Barlow',sans-serif;
+  margin: 0 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hero nav .navlinks li button {
+  color: black;
+  font-family: 'Fraunces',serif;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  background: white;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.hero nav .navlinks li button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: white;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.hero nav .hamburger {
+  display: none;
+}
+
+.hero .content .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: -1;
+}
+
+.hero .content .bg-image .desktop {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.hero .content .bg-image .mobile {
+  display: none;
+}
+
+.hero .content h1 {
+  text-align: center;
+  margin-top: 15vh;
+  font-size: 34px;
+  font-family: 'Fraunces',serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: white;
+}
+
+.hero .content .arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 750px) {
+  .hero nav .navlinks {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 100;
+    top: 15vh;
+    left: 0;
+    height: 50vh;
+    width: calc(100% - 60px);
+    margin: 0 30px;
+    background: white;
+    border-radius: 2px;
+  }
+  .hero nav .navlinks::before {
+    content: '';
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    z-index: 1;
+    border-top: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid white;
+    border-bottom: 20px solid white;
+  }
+  .hero nav .navlinks ul {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero nav .navlinks li {
+    margin: 20px 25px;
+    font-size: 20px;
+    color: #a7abae;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  .hero nav .navlinks li:hover {
+    color: #707070;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  .hero nav .navlinks li button {
+    font-size: 16px;
+    background: #fad400;
+  }
+  .hero nav .navlinks li button:hover {
+    background: #fe7867;
+  }
+  .hero nav .active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .hero nav .hamburger {
+    display: block;
+    margin: 0 30px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero .content .bg-image .desktop {
+    display: none;
+  }
+  .hero .content .bg-image .mobile {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -1;
+  }
+  .hero .content h1 {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

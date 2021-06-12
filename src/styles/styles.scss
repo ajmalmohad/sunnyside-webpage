@@ -6,6 +6,186 @@
     padding:0;
     box-sizing:border-box;
 }
-body{
+html{
+    scroll-behavior: smooth;
+}
+body,html{
     overflow-x: hidden;
+}
+.full{
+    position: relative;
+    overflow-x:hidden;
+}
+.hero{
+    height:100vh;
+    width: 100%;
+    nav{
+        height:12vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            padding:0 25px;
+        }
+        .navlinks{
+            position: relative;
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                margin:0 20px;
+                align-items: center;
+            }
+            li{
+                color:white;
+                font-family: 'Barlow',sans-serif;
+                margin:0 25px;
+                cursor: pointer;
+                font-size: 16px;
+                button{
+                    color:black;
+                    font-family: 'Fraunces',serif;
+                    padding:15px 20px;
+                    border-radius: 25px;
+                    border:none;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    background: white;
+                    transition: 0.2s ease;
+                    cursor: pointer;
+                    &:hover{
+                        background:rgba(255,255,255,0.4);
+                        color:white;
+                        transition: 0.2s ease;
+                    }
+                }
+            }
+        }
+        .hamburger{
+            display: none;
+        }
+    }
+    .content{
+        .bg-image{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 100vh;
+            width:100%;
+            object-fit: contain;
+            z-index: -1;
+            .desktop{
+                display: block;
+                height: 100vh;
+                width:100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+            .mobile{
+                display: none;
+            }
+        }
+        h1{
+            text-align: center;
+            margin-top:15vh;
+            font-size: 34px;
+            font-family: 'Fraunces',serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            color:white;
+        }
+        .arrow{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    //Media query for hero section
+    @media only screen and (max-width: 750px) {
+        nav{
+            .navlinks{
+                opacity: 0;
+                pointer-events: none;
+                position: absolute;
+                z-index: 100;
+                top:15vh;
+                left:0;
+                height:50vh;
+                width:calc(100% - 60px);
+                margin:0 30px;
+                background: white;
+                border-radius: 2px;
+                &::before{
+                    content: '';
+                    height:0px;
+                    width:0px;
+                    position: absolute;
+                    top:-40px;
+                    right:0;
+                    z-index: 1;
+                    border-top: 20px solid transparent;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid white;
+                    border-bottom: 20px solid white;
+                }
+                ul{
+                    position: relative;
+                    top:50%;
+                    transform: translate(0%,-50%);
+                    text-align: center;
+                    flex-direction: column;
+                }
+                li{
+                    margin:20px 25px;
+                    font-size: 20px;
+                    color:hsl(210, 4%, 67%);
+                    transition: 0.2s ease;
+                    &:hover{
+                        color:hsl(0, 0%, 44%);
+                        transition: 0.2s ease;
+                    }
+                    button{
+                        font-size: 16px;
+                        background: hsl(51, 100%, 49%);
+                        &:hover{
+                            background: hsl(7, 99%, 70%);
+                        }
+                    }
+                }
+            }
+            .active{
+                opacity: 1;
+                pointer-events: all;
+            }
+            .hamburger{
+                display: block;
+                margin: 0 30px;
+                cursor: pointer;
+            }
+        }
+    }
+    @media only screen and (max-width: 600px){
+        .content{
+            .bg-image{
+                .desktop{
+                    display: none;
+                }
+                .mobile{
+                    display: block;
+                    height: 100vh;
+                    width:100%;
+                    object-fit: cover;
+                    z-index: -1;
+                }
+            }
+            h1{
+                margin-left:10%;
+                margin-right: 10%;
+            }
+        }
+    }
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
 <body>
+<div class="full" id="luxy">
     <div class="hero">
         <nav>
             <div class="logo">
@@ -18,13 +19,17 @@
                     <li>About</li>
                     <li>Services</li>
                     <li>Projects</li>
-                    <li>Contact</li>
+                    <li><button>Contact</button></li>
                 </ul>
+            </div>
+            <div class="hamburger">
+                <img src="./src/images/icon-hamburger.svg"/>
             </div>
         </nav>
         <div class="content">
             <div class="bg-image">
-                <img src="./src/images/desktop/image-header.jpg" alt="Main">
+                <img class="desktop" src="./src/images/desktop/image-header.jpg" alt="Main">
+                <img class="mobile" src="./src/images/mobile/image-header.jpg" alt="Main">
             </div>
             <h1>We are creatives</h1>
             <div class="arrow">
@@ -157,6 +162,9 @@
             </div>
         </div>
     </div>
+</div>
 
+    <script src="./src/js/luxy.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 </html>
