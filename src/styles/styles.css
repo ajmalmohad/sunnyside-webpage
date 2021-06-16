@@ -745,4 +745,9 @@ html {
   margin: 0px 20px;
   cursor: pointer;
 }
+
+.footer .social .icon:hover {
+  -webkit-filter: brightness(1000%);
+          filter: brightness(1000%);
+}
 /*# sourceMappingURL=styles.css.map */
