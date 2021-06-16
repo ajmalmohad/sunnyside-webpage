@@ -392,11 +392,16 @@ html {
   width: 100%;
 }
 
-.sec3 .sub-sec1 .image img, .sec3 .sub-sec2 .image img {
+.sec3 .sub-sec1 .image .desktop, .sec3 .sub-sec2 .image .desktop {
+  display: block;
   height: 80vh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.sec3 .sub-sec1 .image .mobile, .sec3 .sub-sec2 .image .mobile {
+  display: none;
 }
 
 .sec3 .sub-sec1 .content, .sec3 .sub-sec2 .content {
@@ -431,18 +436,25 @@ html {
 
 @media only screen and (max-width: 700px) {
   .sec3 {
-    height: 200vh;
+    height: 160vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   .sec3 .sub-sec1, .sec3 .sub-sec2 {
-    padding: 0;
+    height: 80vh;
   }
   .sec3 .sub-sec1 .content, .sec3 .sub-sec2 .content {
     padding: 0% 20% 0% 20%;
-    top: -25%;
+    top: -35%;
+  }
+  .sec3 .sub-sec1 .image, .sec3 .sub-sec2 .image {
+    height: 80vh;
+    width: 100%;
+  }
+  .sec3 .sub-sec1 .image .desktop, .sec3 .sub-sec2 .image .desktop {
+    height: 80vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */

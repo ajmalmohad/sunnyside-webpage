@@ -343,10 +343,14 @@ html {
     .image{
       height: 80vh;
       width: 100%;
-      img{
+      .desktop{
+        display: block;
         height: 80vh;
         width: 100%;
         object-fit: cover;
+      }
+      .mobile{
+        display: none;
       }
     }
     .content{
@@ -381,13 +385,20 @@ html {
     }
   }
   @media only screen and (max-width: 700px){
-    height:200vh;
+    height:160vh;
     flex-direction: column;
     .sub-sec1,.sub-sec2{
-      padding:0;
+      height:80vh;
       .content{
         padding:0% 20% 0% 20%;
-        top:-25%;
+        top:-35%;
+      }
+      .image{
+        height: 80vh;
+        width: 100%;
+        .desktop{
+          height: 80vh;
+        }
       }
     }
   }
