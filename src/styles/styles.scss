@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
 
 * {
@@ -21,7 +21,7 @@ html {
   overflow-x: hidden;
 }
 
-// Hero Section 
+// Hero Section
 
 .hero {
   height: 100vh;
@@ -222,93 +222,112 @@ html {
   }
 }
 
-
 // Section 1
-.sec1,.sec2{
-    display: flex;
-    flex-direction: row;
-    height: 80vh;
+.sec1,
+.sec2 {
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .image {
+    flex: 1;
+    z-index: -2;
+
+    img {
+      height: 80vh;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    flex: 1;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    .image{
-        flex:1;
-        z-index: -2;
-        img{
-            height: 80vh;
-            width: 100%;
-            object-fit: cover;
-        }
+    font-family: "Barlow", sans-serif;
+
+    h1 {
+      padding: 30px 15%;
+      font-size: 32px;
+      font-family: "Fraunces", serif;
     }
-    .content{
-        flex: 1;
-        width: 100%;
-        font-family: "Barlow", sans-serif;
-        h1{
-            padding:30px 15%;
-            font-size: 32px;
-            font-family: "Fraunces", serif;
-        }
-        p{
-            padding:0px 15%;
-            font-weight: 500;
-            line-height: 26px;
-        }
-        button{
-            margin:30px 15%;
-            border:none;
-            background: transparent;
-            font-family:"Fraunces", serif;
-            text-transform: uppercase;
-            font-size: 16px;
-            border-bottom: 5px double hsl(51, 100%, 49%);
-            transition: 0.2s ease;
-            &:hover{
-                border-bottom: 5px dotted hsl(51, 100%, 49%);
-                transition: 0.2s ease;
-            }
-        }
+
+    p {
+      padding: 0px 15%;
+      font-weight: 500;
+      line-height: 26px;
     }
-    @media only screen and (max-width: 700px){
-        flex-direction: column;
-        height:100vh;
-        .image{
-            img{
-                height:50vh;
-                width: 100vw;
-            }
-        }
-        .content{
-            text-align: center;
-            h1{
-                padding:50px 10% 30px 10%;
-            }
-        }
+
+    button {
+      margin: 30px 15%;
+      border: none;
+      background: transparent;
+      font-family: "Fraunces", serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      border-bottom: 5px double hsl(51, 100%, 49%);
+      transition: 0.2s ease;
+
+      &:hover {
+        border-bottom: 5px dotted hsl(51, 100%, 49%);
+        transition: 0.2s ease;
+      }
     }
-    @media only screen and (max-width: 500px){
-        .content{
-            h1{
-                padding:30px 10%;
-            }
-            p{
-                padding:0px 12%;
-            }
-        }
+  }
+
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+    height: 100vh;
+
+    .image {
+      img {
+        height: 50vh;
+        width: 100vw;
+      }
     }
+
+    .content {
+      text-align: center;
+
+      h1 {
+        padding: 50px 10% 30px 10%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .content {
+      h1 {
+        padding: 30px 10%;
+      }
+
+      p {
+        padding: 0px 12%;
+      }
+    }
+  }
 }
-.sec1{
-    .image{
-        order:2;
+
+.sec1 {
+  .image {
+    order: 2;
+  }
+
+  .content {
+    order: 1;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .image {
+      order: 1;
     }
-    .content{
-        order:1;
+
+    .content {
+      order: 2;
     }
-    @media only screen and (max-width: 700px){
-        .image{
-            order:1;
-        }
-        .content{
-            order:2;
-        }
-    }
+  }
 }
+
+//Section3
