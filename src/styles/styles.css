@@ -457,4 +457,26 @@ html {
     height: 80vh;
   }
 }
+
+@media only screen and (max-width: 550px) {
+  .sec3 .sub-sec1 .content, .sec3 .sub-sec2 .content {
+    padding: 0% 10% 0% 10%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .sec3 .sub-sec1 .image .desktop, .sec3 .sub-sec2 .image .desktop {
+    display: none;
+  }
+  .sec3 .sub-sec1 .image .mobile, .sec3 .sub-sec2 .image .mobile {
+    display: block;
+    height: 80vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .sec3 .sub-sec1 .content, .sec3 .sub-sec2 .content {
+    top: -40%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

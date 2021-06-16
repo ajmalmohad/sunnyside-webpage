@@ -402,4 +402,29 @@ html {
       }
     }
   }
+  @media only screen and (max-width: 550px){
+    .sub-sec1,.sub-sec2{
+      .content{
+        padding:0% 10% 0% 10%;
+      }
+    }
+  }
+  @media only screen and (max-width: 420px){
+    .sub-sec1,.sub-sec2{
+      .image{
+        .desktop{
+          display: none;
+        }
+        .mobile{
+          display: block;
+          height:80vh;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .content{
+        top:-40%;
+      }
+    }
+  }
 }
