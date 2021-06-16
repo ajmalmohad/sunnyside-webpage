@@ -331,3 +331,64 @@ html {
 }
 
 //Section3
+.sec3{
+  height:80vh;
+  width: 100%;
+  margin-top:-2px;
+  display: flex;
+  flex-direction: row;
+  .sub-sec1,.sub-sec2{
+    flex: 1;
+    text-align: center;
+    .image{
+      height: 80vh;
+      width: 100%;
+      img{
+        height: 80vh;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .content{
+      padding:10px 20% 30% 20%;
+      position: relative;
+      top:-35%;
+    }
+    h1{
+      font-family: "Fraunces", serif;
+      padding:10px 0px;
+    }
+    p{
+      font-family: "Barlow", sans-serif;
+      line-height: 26px;
+    }
+  }
+  .sub-sec1{
+    .content{
+      color:hsl(167, 40%, 24%);
+    }
+  }
+  .sub-sec2{
+    .content{
+      color:hsl(198, 62%, 26%);
+    }
+  }
+  @media only screen and (max-width: 900px){
+    .sub-sec1,.sub-sec2{
+      .content{
+        padding:10px 10% 30% 10%;
+      }
+    }
+  }
+  @media only screen and (max-width: 700px){
+    height:200vh;
+    flex-direction: column;
+    .sub-sec1,.sub-sec2{
+      padding:0;
+      .content{
+        padding:0% 20% 0% 20%;
+        top:-25%;
+      }
+    }
+  }
+}

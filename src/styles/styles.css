@@ -229,7 +229,8 @@ html {
   }
 }
 
-.sec1, .sec2 {
+.sec1,
+.sec2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,21 +248,24 @@ html {
           justify-content: center;
 }
 
-.sec1 .image, .sec2 .image {
+.sec1 .image,
+.sec2 .image {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   z-index: -2;
 }
 
-.sec1 .image img, .sec2 .image img {
+.sec1 .image img,
+.sec2 .image img {
   height: 80vh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.sec1 .content, .sec2 .content {
+.sec1 .content,
+.sec2 .content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -269,19 +273,22 @@ html {
   font-family: "Barlow", sans-serif;
 }
 
-.sec1 .content h1, .sec2 .content h1 {
+.sec1 .content h1,
+.sec2 .content h1 {
   padding: 30px 15%;
   font-size: 32px;
   font-family: "Fraunces", serif;
 }
 
-.sec1 .content p, .sec2 .content p {
+.sec1 .content p,
+.sec2 .content p {
   padding: 0px 15%;
   font-weight: 500;
   line-height: 26px;
 }
 
-.sec1 .content button, .sec2 .content button {
+.sec1 .content button,
+.sec2 .content button {
   margin: 30px 15%;
   border: none;
   background: transparent;
@@ -293,37 +300,44 @@ html {
   transition: 0.2s ease;
 }
 
-.sec1 .content button:hover, .sec2 .content button:hover {
+.sec1 .content button:hover,
+.sec2 .content button:hover {
   border-bottom: 5px dotted #fad400;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
 @media only screen and (max-width: 700px) {
-  .sec1, .sec2 {
+  .sec1,
+  .sec2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100vh;
   }
-  .sec1 .image img, .sec2 .image img {
+  .sec1 .image img,
+  .sec2 .image img {
     height: 50vh;
     width: 100vw;
   }
-  .sec1 .content, .sec2 .content {
+  .sec1 .content,
+  .sec2 .content {
     text-align: center;
   }
-  .sec1 .content h1, .sec2 .content h1 {
+  .sec1 .content h1,
+  .sec2 .content h1 {
     padding: 50px 10% 30px 10%;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .sec1 .content h1, .sec2 .content h1 {
+  .sec1 .content h1,
+  .sec2 .content h1 {
     padding: 30px 10%;
   }
-  .sec1 .content p, .sec2 .content p {
+  .sec1 .content p,
+  .sec2 .content p {
     padding: 0px 12%;
   }
 }
@@ -350,6 +364,85 @@ html {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+}
+
+.sec3 {
+  height: 80vh;
+  width: 100%;
+  margin-top: -2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sec3 .sub-sec1, .sec3 .sub-sec2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.sec3 .sub-sec1 .image, .sec3 .sub-sec2 .image {
+  height: 80vh;
+  width: 100%;
+}
+
+.sec3 .sub-sec1 .image img, .sec3 .sub-sec2 .image img {
+  height: 80vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sec3 .sub-sec1 .content, .sec3 .sub-sec2 .content {
+  padding: 10px 20% 30% 20%;
+  position: relative;
+  top: -35%;
+}
+
+.sec3 .sub-sec1 h1, .sec3 .sub-sec2 h1 {
+  font-family: "Fraunces", serif;
+  padding: 10px 0px;
+}
+
+.sec3 .sub-sec1 p, .sec3 .sub-sec2 p {
+  font-family: "Barlow", sans-serif;
+  line-height: 26px;
+}
+
+.sec3 .sub-sec1 .content {
+  color: #25564b;
+}
+
+.sec3 .sub-sec2 .content {
+  color: #19536b;
+}
+
+@media only screen and (max-width: 900px) {
+  .sec3 .sub-sec1 .content, .sec3 .sub-sec2 .content {
+    padding: 10px 10% 30% 10%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .sec3 {
+    height: 200vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sec3 .sub-sec1, .sec3 .sub-sec2 {
+    padding: 0;
+  }
+  .sec3 .sub-sec1 .content, .sec3 .sub-sec2 .content {
+    padding: 0% 20% 0% 20%;
+    top: -25%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
