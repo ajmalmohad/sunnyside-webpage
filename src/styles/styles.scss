@@ -595,3 +595,40 @@ html {
 
 
 //Footer
+.footer{
+  display: flex;
+  flex-direction: column;
+  background: hsl(173, 56%, 72%);
+  align-items: center;
+  text-align: center;
+  color: hsl(168, 34%, 41%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  .logo{
+    margin:50px 0 30px 0;
+  }
+  .links{
+    margin:0 0 20px 0;
+    ul{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      li{
+        margin:0 20px;
+        cursor: pointer;
+        &:hover{
+          color:white;
+        }
+      }
+    }
+  }
+  .social{
+    display: flex;
+    flex-direction: row;
+    margin:30px 0;
+    .icon{
+      margin:0px 20px;
+      cursor: pointer;
+    }
+  }
+}
